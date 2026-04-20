@@ -18,7 +18,7 @@ func (d Driver) NewClient(params model.PayDriverClientParam) (model.PayClient, e
 	client, err := alipay.NewClientV3(
 		params.Credential[AppID],
 		params.Credential[AppCertPrivateKey],
-		params.Credential[IsProd] == "true",
+		params.Credential[IsProd] == True,
 	)
 	if err != nil {
 		return nil, err
